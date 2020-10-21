@@ -8,17 +8,21 @@
 <body>
   <h1>Prueba - Faq Schema</h1>
     <hr>
-  <section>    
+  <section>
+    <h3 class="question">Funciona Faq Schema...?</h3>
     <div>
       <p class="answer" >
-        Respuesta 1
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Enim, vel iure. Quidem odit sapiente molestiae rerum, voluptatibus 
+        possimus repudiandae vel!
       </p>
     </div>
   </section>
-  <section>    
+  <section>
+    <h3 id="question">Segunda pregunta funcional?</h3>
     <div>
       <p id="answer">
-        Respuesta 2
+        Si todo correcto y en orden.
       </p>
     </div>
   </section>
@@ -30,16 +34,14 @@
 <!-- Schema script -->
 <script>
   var questionId = 'question';
+  var answerId = 'answer';
 
   var logOutput = false;
   (function(){
 
 // Build Data
 var questions = Array.from(document.getElementsByIdName(questionId)).map(function(e){return e.textContent});
-var answers = [
-  'Primera Pregunta?',
-  'Segunda Pregunta?'
-]
+var answers = Array.from(document.getElementsByIdName(answerId)).map(function(e){return e.textContent});
 
 if (questions.length && answers.length){
 
