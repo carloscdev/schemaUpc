@@ -35,11 +35,10 @@
   (function(){
 
 // Build Data
+var pregunta1 = "Primera Pregunta ?";
+var pregunta2 = "Segunda Pregunta ?";
 var questions = Array.from(document.getElementsByIdName(questionId)).map(function(e){return e.textContent});
-var answers = Array(
-  "pregunta1",
-   "pregunta2"
-   )
+var answers = Array(pregunta1, pregunta2)
 
 if (questions.length && answers.length){
 
