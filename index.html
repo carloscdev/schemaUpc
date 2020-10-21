@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,14 +30,17 @@
 <!-- Schema script -->
 <script>
   var answerClass = 'answer';
-
   var logOutput = false;
+
   (function(){
 
-// Build Data
+// Captura las respuestas de manera dinámica
 var answers = Array.from(document.getElementsByClassName(answerClass)).map(function(e){return e.textContent});
+// Establece las preguntas de manera manual
 var questions = ["primera pregunta", "segunda pregunta"]
 
+// Debe ser igual Cantidad de Respuestas y Preguntas
+// Las Preguntas y Respuestas deben ser en el mismo orden
 if (questions.length && answers.length){
 
     var data = {
@@ -58,7 +61,6 @@ if (questions.length && answers.length){
         item['acceptedAnswer']['text'] = a;
         return item;
     }
-
     console.assert(questions.length == answers.length, {questions: questions.length, answers: answers.length, errorMsg: "Questions and Answers are not the same lengths"});
 
     data['mainEntity'] = questions.map(function(q,i){return buildItem(q,answers[i])});
