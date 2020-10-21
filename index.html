@@ -24,24 +24,19 @@
 <!-- Schema script -->
 <script type="text/javascript">
   $(document).ready(function(){
-    let name = document.getElementsByTagName('h1')[0].innerHTML;
-    let absolute_url = window.location.href;
-    let description = document.getElementById("description").textContent; 
-    let firstAnswer =  document.getElementById("firstAnswer").textContent; 
+    var name = document.getElementsByTagName('h1')[0].innerHTML;
+    var absolute_url = window.location.href;
+    var description = document.getElementById("description").textContent; 
+    var firstAnswer =  document.getElementById("firstAnswer").textContent; 
     data = {
       "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "url": absolute_url,
-      "description": description,
-      "name": name,
-      "headline": name,
-      "provider": "UPC: Universidad Peruana de Ciencias Aplicadas",
+      "@type": "FAQPage",      
       "mainEntity": [{
         "@type": "Question",
         "name": "Funciona Faq Schema?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": firstAnswer
+          "text": "Si funciona correctamente"
         }
       }]
     };  
