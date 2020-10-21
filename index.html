@@ -17,7 +17,7 @@
   </section>
   <section>    
     <div>
-      <p id="answer">
+      <p class="answer">
         Respuesta 2
       </p>
     </div>
@@ -29,13 +29,13 @@
 
 <!-- Schema script -->
 <script>
-  var answerId = 'answer';
+  var answerClass = 'answer';
 
   var logOutput = false;
   (function(){
 
 // Build Data
-var answers = Array.from(document.getElementById(answerId)).map(function(e){return e.textContent});
+var answers = Array.from(document.getElementsByClassName(answerClass)).map(function(e){return e.textContent});
 var questions = ["primera pregunta", "segunda pregunta"]
 
 if (questions.length && answers.length){
