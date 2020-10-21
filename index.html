@@ -8,14 +8,15 @@
 <body>
   <section itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
     <h1>Prueba - Faq Schema</h1>
-    <p id="description">
-      Esta es una prueba para implementar FAQ Schema
-    </p>
-    <p id="firstAnswer">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Enim, vel iure. Quidem odit sapiente molestiae rerum, voluptatibus 
-      possimus repudiandae vel!
-    </p>
+    <hr>
+    <h3 itemprop="name">Funciona Faq Schema...?</h3>
+    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <p id="firstAnswer"  itemprop="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Enim, vel iure. Quidem odit sapiente molestiae rerum, voluptatibus 
+        possimus repudiandae vel!
+      </p>
+    </div>
   </section>
 
   <!-- Opcional - si la web no cuenta con Jquery -->
@@ -23,12 +24,13 @@
 
 <!-- Schema script -->
 <script>
-  let firstAnswer = description = document.getElementById("firstAnswer").textContent;
+  var firstAnswer = document.getElementById("firstAnswer").textContent;
 </script>
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",     
+    "@type": "FAQPage",  
+    "name": Preguntas Frecuentes - UPC   
       "mainEntity": [{
         "@type": "Question",
         "name": "Funciona Faq Schema?",
