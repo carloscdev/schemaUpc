@@ -29,16 +29,14 @@
 
 <!-- Schema script -->
 <script>
-  var questionId = 'question';
+  var answerId = 'answer';
 
   var logOutput = false;
   (function(){
 
 // Build Data
-var pregunta1 = "Primera Pregunta ?";
-var pregunta2 = "Segunda Pregunta ?";
-var questions = Array.from(document.getElementsByIdName(questionId)).map(function(e){return e.textContent});
-var answers = Array(pregunta1, pregunta2)
+var answers = Array.from(document.getElementById(answerId)).map(function(e){return e.textContent});
+var questions = ["primera pregunta", "segunda pregunta"]
 
 if (questions.length && answers.length){
 
@@ -73,9 +71,7 @@ if (questions.length && answers.length){
 if (logOutput){
       console.log(script.outerHTML);
 }
-
 }
-
 })(document);
 </script>  
 </body>
