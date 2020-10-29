@@ -6,7 +6,7 @@
   <title>Prueba UPC Schema</title>
 </head>
 <body>
-  <h1>Prueba - Faq Schema</h1>
+  <h1 id="nombreCarrera">Hotelería y Administración</h1>
     <hr>
   <section>    
     <div>
@@ -31,13 +31,16 @@
 <script>
   var answerClass = 'answer';
   var logOutput = false;
+  //Captura la etiqueta que contiene el nombre de la Carrera
+  var carrera = document.getElementById("nombreCarrera");
+  var carreraNombre = carrera.innerHTML;
 
   (function(){
 
 // Captura las respuestas de manera dinámica
 var answers = Array.from(document.getElementsByClassName(answerClass)).map(function(e){return e.textContent});
 // Establece las preguntas de manera manual
-var questions = ["primera pregunta", "segunda pregunta"]
+var questions = [`Estudia en ${carreraNombre}`, `¿Cuál es el campo laboral en la carrera de ${carreraNombre}`]
 
 // Debe ser igual Cantidad de Respuestas y Preguntas
 // Las Preguntas y Respuestas deben ser en el mismo orden
