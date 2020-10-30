@@ -13,8 +13,11 @@ var carreraNombre = carrera.innerHTML;
   );
   // Establece las preguntas de manera manual
   var questions = [
-    `Estudia en ${carreraNombre}`,
-    `¿Cuál es el campo laboral en la carrera de ${carreraNombre}`,
+    `¿Qué cursos lleva ${carreraNombre}?`,
+    `¿Donde estudiar ${carreraNombre}?`,
+    `'Cuánto dura la carrera de ${carreraNombre}?`,
+    `¿Cómo es la carrera de ${carreraNombre}?`,
+    `¿Cuál es el perfil de profesional de ${carreraNombre}?`,
   ];
 
   // Debe ser igual Cantidad de Respuestas y Preguntas
