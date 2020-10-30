@@ -15,7 +15,7 @@ var carreraNombre = carrera.innerHTML;
   var questions = [
     `¿Qué cursos lleva ${carreraNombre}?`,
     `¿Donde estudiar ${carreraNombre}?`,
-    `'Cuánto dura la carrera de ${carreraNombre}?`,
+    `¿Cuánto dura la carrera de ${carreraNombre}?`,
     `¿Cómo es la carrera de ${carreraNombre}?`,
     `¿Cuál es el perfil de profesional de ${carreraNombre}?`,
   ];
