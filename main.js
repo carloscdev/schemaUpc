@@ -1,9 +1,7 @@
+import { preguntas } from "./preguntas1.js";
+
 var answerClass = "answer";
 var logOutput = false;
-//Captura la etiqueta que contiene el nombre de la Carrera
-var carrera = document.getElementById("nombreCarrera");
-var carreraNombre = carrera.innerHTML;
-
 (function () {
   // Captura las respuestas de manera dinámica
   var answers = Array.from(document.getElementsByClassName(answerClass)).map(
@@ -12,13 +10,8 @@ var carreraNombre = carrera.innerHTML;
     }
   );
   // Establece las preguntas de manera manual
-  var questions = [
-    `¿Qué cursos lleva ${carreraNombre}?`,
-    `¿Donde estudiar ${carreraNombre}?`,
-    `¿Cuánto dura la carrera de ${carreraNombre}?`,
-    `¿Cómo es la carrera de ${carreraNombre}?`,
-    `¿Cuál es el perfil de profesional de ${carreraNombre}?`,
-  ];
+  var questions = preguntas;
+  console.log(questions);
 
   // Debe ser igual Cantidad de Respuestas y Preguntas
   // Las Preguntas y Respuestas deben ser en el mismo orden
@@ -29,7 +22,7 @@ var carreraNombre = carrera.innerHTML;
       mainEntity: [],
     };
 
-    buildItem = (q, a) => {
+    var buildItem = (q, a) => {
       var item = {
         "@type": "Question",
         name: null,
