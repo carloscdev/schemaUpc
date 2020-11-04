@@ -2,16 +2,20 @@
 const carrera = document.getElementById("nombreCarrera");
 const carreraNombre = carrera.innerHTML;
 // Establece las preguntas de manera manual
-
-export const preguntas = [
-  `¿Qué cursos lleva ${carreraNombre}? prueba`,
-  `¿Donde estudiar ${carreraNombre}?`,
-  `¿Cuánto dura la carrera de ${carreraNombre}?`,
-  `¿Cómo es la carrera de ${carreraNombre}?`,
-  `¿Cuál es el perfil de profesional de ${carreraNombre}?`,
-];
-
-export const preguntas2 = [
-  `¿Es una prueba de ${carreraNombre}?`,
-  `¿Es una segunda prueba de${carreraNombre}?`,
-];
+// Validar URL
+var URLdomain = window.location.host;
+if (URLdomain == "/schemaUpc/page2.html") {
+  var subPreguntas = [
+    `¿Es una prueba de ${carreraNombre}?`,
+    `¿Es una segunda prueba de${carreraNombre}?`,
+  ];
+} else {
+  var subPreguntas = [
+    `¿Qué cursos lleva ${carreraNombre}? prueba`,
+    `¿Donde estudiar ${carreraNombre}?`,
+    `¿Cuánto dura la carrera de ${carreraNombre}?`,
+    `¿Cómo es la carrera de ${carreraNombre}?`,
+    `¿Cuál es el perfil de profesional de ${carreraNombre}?`,
+  ];
+}
+export const preguntas = subPreguntas;
