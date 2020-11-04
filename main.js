@@ -1,6 +1,6 @@
-var pathname = window.location.pathname;
-alert(pathname);
-// var URLdomain = window.location.host;
+//var pathname = window.location.pathname;
+var URLdomain = window.location.host;
+alert(URLdomain);
 
 import { preguntas, preguntas2 } from "./preguntas1.js";
 var answerClass = "answer";
@@ -13,7 +13,7 @@ var logOutput = false;
     }
   );
   // Establece las preguntas de manera manual
-  if (pathname == "/schemaUpc/page2.html") {
+  if (URLdomain == "carloscdev.github.io") {
     var questions = preguntas2;
     console.log(questions);
   } else {
