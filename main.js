@@ -1,5 +1,5 @@
-import { preguntas } from "./preguntas1.js";
-
+var pathname = window.location.pathname;
+import { preguntas, preguntas2 } from "./preguntas1.js";
 var answerClass = "answer";
 var logOutput = false;
 (function () {
@@ -10,8 +10,11 @@ var logOutput = false;
     }
   );
   // Establece las preguntas de manera manual
-  var questions = preguntas;
-  console.log(questions);
+  if (pathname == "/page2.html") {
+    var questions = preguntas2;
+  } else {
+    var questions = preguntas;
+  }
 
   // Debe ser igual Cantidad de Respuestas y Preguntas
   // Las Preguntas y Respuestas deben ser en el mismo orden
