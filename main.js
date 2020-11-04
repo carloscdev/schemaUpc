@@ -1,5 +1,5 @@
 var pathname = window.location.pathname;
-
+alert(pathname);
 // var URLdomain = window.location.host;
 
 import { preguntas, preguntas2 } from "./preguntas1.js";
