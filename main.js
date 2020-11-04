@@ -1,4 +1,7 @@
 var pathname = window.location.pathname;
+
+// var URLdomain = window.location.host;
+
 import { preguntas, preguntas2 } from "./preguntas1.js";
 var answerClass = "answer";
 var logOutput = false;
@@ -12,8 +15,10 @@ var logOutput = false;
   // Establece las preguntas de manera manual
   if (pathname == "/page2.html") {
     var questions = preguntas2;
+    console.log(questions);
   } else {
     var questions = preguntas;
+    console.log(questions);
   }
 
   // Debe ser igual Cantidad de Respuestas y Preguntas
@@ -56,5 +61,7 @@ var logOutput = false;
     if (logOutput) {
       console.log(script.outerHTML);
     }
+  } else {
+    console.log("No coincide las preguntas y respuestas");
   }
 })(document);
