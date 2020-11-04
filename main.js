@@ -1,5 +1,5 @@
 //var pathname = window.location.pathname;
-import { preguntas } from "./preguntas1.js";
+import { preguntas } from "./preguntas.js";
 var answerClass = "answer";
 var logOutput = false;
 (function () {
