@@ -1,4 +1,4 @@
-//var pathname = window.location.pathname;
+// Importar Preguntas
 import { preguntas } from "./preguntas.js";
 var answerClass = "answer";
 var logOutput = false;
@@ -9,7 +9,7 @@ var logOutput = false;
       return e.textContent;
     }
   );
-  // Establece las preguntas de manera manual
+
   var questions = preguntas;
 
   // Debe ser igual Cantidad de Respuestas y Preguntas

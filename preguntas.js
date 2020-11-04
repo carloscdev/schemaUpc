@@ -3,7 +3,8 @@ const carrera = document.getElementById("nombreCarrera");
 const carreraNombre = carrera.innerHTML;
 // Establece las preguntas de manera manual
 // Validar URL
-var URLdomain = window.location.host;
+var URLdomain = window.location.pathname;
+// var URLdomain = window.location.host;
 if (URLdomain == "/schemaUpc/page2.html") {
   var subPreguntas = [
     `¿Es una prueba de ${carreraNombre}?`,
