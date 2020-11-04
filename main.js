@@ -13,7 +13,7 @@ var logOutput = false;
     }
   );
   // Establece las preguntas de manera manual
-  if (pathname == "/page2.html") {
+  if (pathname == "/schemaUpc/page2.html") {
     var questions = preguntas2;
     console.log(questions);
   } else {
